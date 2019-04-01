@@ -1,0 +1,42 @@
+.filter-nav{
+    background:$lightest;
+    position:relative;
+    top:-1px;
+    left:0;
+    padding:1em;
+    overflow:hidden;
+    visibility:hidden;
+    transition:background .5s $easeOutQuart;
+    z-index:3;
+
+    ul{
+        text-align:center;
+        display:flex;
+        justify-content: space-around;
+    }
+
+    a{
+        display:block;
+        transition:opacity .5s $easeOutQuart;
+        &:hover{
+            opacity:1 !important;
+        }
+    }
+
+    &.dark{
+        background:$darkest !important;
+        a{
+            color:$lightest !important;
+        }
+    }
+}
+@media #{$above-s}{
+    .module--grid{
+        &.active{
+            .filter-nav{
+                position:sticky;
+                visibility:visible;
+            }
+        }
+    }
+}

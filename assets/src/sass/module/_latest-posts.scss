@@ -1,0 +1,10 @@
+[data-module="latest_posts"]{
+    .module{
+        &:first-of-type{
+            padding-top:0 !important;
+            .grid-item{
+                padding-top:0 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "aogk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frederikchristensen/aogk.git"
+  },
+  "author": "Frederik christensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frederikchristensen/aogk/issues"
+  },
+  "homepage": "https://github.com/frederikchristensen/aogk#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "concat": "^1.0.3",
+    "concurrently": "^3.5.1",
+    "datocms-client": "^0.3.41",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-npm-dist": "^0.1.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.1",
+    "gulp-util": "^3.0.8",
+    "html-tag": "^2.0.0",
+    "scrollmagic": "^2.0.5",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "barba.js": "^1.0.0",
+    "countup.js": "^1.9.3",
+    "css-reset-and-normalize-sass": "^0.1.2",
+    "emergence.js": "^1.1.2",
+    "gsap": "^1.20.3",
+    "headroom.js": "^0.9.4",
+    "in-view": "^0.6.1",
+    "instafeed.js": "^1.4.1",
+    "jquery": "^3.2.1",
+    "lazysizes": "^4.0.1",
+    "plyr": "^3.1.0",
+    "sass-easing": "^1.0.3",
+    "siema": "^1.5.1",
+    "swiper": "^4.1.0",
+    "turbolinks": "^5.1.1"
+  }
+}

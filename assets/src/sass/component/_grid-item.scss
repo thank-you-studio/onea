@@ -1,0 +1,160 @@
+.sticky-header{
+    color:#000;
+    *{
+        color:#000;
+    }
+    // opacity:.075;
+    // position:sticky;
+    top:0;
+    left:0;
+    padding:$fs-l 0;
+    @media #{$above-s}{
+        padding:$fs-xl 0;
+    }
+    @media #{$above-m}{
+        padding:0;
+        padding-bottom:$desktop-spacing-l;
+    }
+}
+
+.grid-item{
+    h4,.paragraph-text,.post-date{
+        margin-bottom:2rem;
+    }
+    .button{
+        margin-top:2.5rem;
+    }
+    .text{
+        position:relative;
+        .inner{
+            // position:sticky;
+            top:4em;
+            left:0;
+        }
+        .more-link{
+            position:relative;
+            z-index:2;
+        }
+    }
+    .image-wrapper{
+        overflow:hidden;
+    }
+}
+
+.content{
+    z-index:1;
+    position:relative;
+    &:nth-of-type(5n+1){
+        .text{
+            grid-column: 2 / span 4;
+        }
+        .image{
+            grid-column: 2 / span 7;
+        }
+    }
+
+    &:nth-of-type(5n+2){
+        .text{
+            grid-column: 6 / span 4;
+        }
+        .image{
+            grid-column: 6 / span 7;
+        }
+    }
+
+    &:nth-of-type(5n+3){
+        .text{
+            grid-column: 1/ span 4;
+            order: 2;
+        }
+        .image{
+            grid-column: 1 / span 7;
+            order: 1;
+        }
+    }
+
+    &:nth-of-type(5n+4){
+        .text{
+            grid-column: 1/ span 4;
+            order: 2;
+        }
+        .image{
+            grid-column: 1 / span 7;
+            order: 1;
+        }
+    }
+
+    &:nth-of-type(5n+5){
+        .text{
+            grid-column: 8/ span 4;
+            order: 2;
+        }
+        .image{
+            grid-column: 5 / span 7;
+            order: 1;
+        }
+    }
+}
+
+[data-namespace="frontpage"],[data-namespace="archive"]{
+    .grid-item{
+        .text + .image{
+            margin-top:1.5em;
+        }
+        .text{
+            grid-column: 1 / span 1;
+        }
+        .image{
+            grid-column: 2 / span 1;
+            margin-top:3em;
+        }
+        &:nth-child(odd){
+            .text{
+                grid-column: 2 / span 1;
+                order: 2;
+            }
+            .image{
+                grid-column: 1 / span 1;
+                order: 1;
+            }
+            .text + .image{
+                margin-top:1.5em;
+            }
+        }
+        @media #{$above-l}{
+            .text + .image, .image{
+                margin-top:0;
+            }
+            &:nth-child(3n+1){
+                .text{
+                    grid-column: 10 / span 3;
+                    order: 2;
+                }
+                .image{
+                    grid-column: 2 / span 8;
+                    order: 1;
+                }
+            }
+
+            &:nth-child(3n+2){
+                .text{
+                    grid-column: 3 / span 3;
+                }
+                .image{
+                    grid-column: 6 / span 7;
+                }
+            }
+
+            &:nth-child(3n+3){
+                .text{
+                    grid-column: 9 / span 3;
+                    order: 2;
+                }
+                .image{
+                    grid-column: 2 / span 7;
+                    order: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+$desktop_spacing: 2rem;
+.newsletter{
+    margin-bottom:$desktop_spacing;
+    grid-column: 1 / span 2;
+    @media #{$above-m}{
+        grid-column: 1 / span 12;
+        margin-bottom:$desktop_spacing*2;
+    }
+    @media #{$above-l}{
+        text-align:center;
+        grid-column: 4 / span 6;
+        margin-bottom:$desktop_spacing*4;
+    }
+    h3,p{
+        margin-bottom:$desktop_spacing;
+    }
+}
+
+#newsletter-form{
+    .button{
+        margin-top:1em;
+    }
+    @media #{$above-s}{
+        display:grid;
+        grid-column-gap:$fs-l;
+        grid-template-columns: repeat(6, 1fr);
+        input{
+            grid-column: 1 / span 4;
+        }
+        .button{
+            margin-top:0;
+            grid-column: 5 / span 2;
+        }
+    }
+}

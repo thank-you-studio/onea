@@ -1,0 +1,40 @@
+html{
+    &.loading{
+        overflow:hidden;
+        pointer-events: none;
+    }
+}
+#preloader{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    left:0;
+    overflow:hidden;
+    cursor:wait;
+    user-select: none;
+    z-index: 9999999;
+    li{
+        span{
+            display:inline-flex;
+            position:relative;
+            overflow:hidden;
+        }
+    }
+    &:before, &:after{
+        content:'';
+        height:50%;
+        position:absolute;
+        width:100%;
+        left:0;
+        z-index: 999;
+        background: linear-gradient(rgba($darkest,1), rgba($darkest,0));
+    }
+    &:before{
+        top:0;
+    }
+    &:after{
+        background: linear-gradient(rgba($darkest,0), rgba($darkest,1));
+        bottom:0;
+    }
+}

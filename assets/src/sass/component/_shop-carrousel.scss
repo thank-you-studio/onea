@@ -1,0 +1,177 @@
+.shop-carrousel{
+    margin:$fs-xl 0 $mobile-wrapper-padding 0;
+    @media #{$above-m}{
+        margin:$desktop-spacing-l 0 $desktop-wrapper-padding 0;
+    }
+    // margin-bottom:$fs-xl;
+    // @media #{$above-l}{
+    //     margin-bottom:$fs-xxl;
+    // }
+    .swiper-slide{
+        margin-left:1.5em;
+        margin-right:0;
+        width:calc(((33.333vw - 1.5em)*1.2));
+        height:auto;
+        *{
+            min-height:100%;
+            pointer-events: none;
+        }
+    }
+}
+.shop{
+    position:relative;
+    padding:0 !important;
+    h4{
+        margin-bottom:1.25rem;
+    }
+    p{
+        &:last-of-type{
+            margin-bottom:2rem;
+        }
+    }
+    &:before{
+        content:'';
+        background:$lightest;
+        height:$fs-xl;
+        @media #{$above-m}{
+            height:$desktop-spacing-l;
+        }
+        width:100%;
+        position:absolute;
+        top:2px;
+        left:0;
+        transform:translate3d(0,-100%,0);
+    }
+    .shop-info{
+        @media #{$above-l}{
+            position:absolute !important;
+            top:50%;
+            left:50%;
+            height:100%;
+            width:100%;
+            z-index:9;
+            transform:translate3d(-50%,-50%,0);
+            pointer-events: none;
+
+            .inner, .tab-content{
+                background:$lightest;
+                position:absolute;
+                top:0;
+                right:0;
+                width:33.333%;
+                height:100%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                pointer-events: auto;
+            }
+        }
+        ul{
+            border-left:1px solid $light;
+            border-right:1px solid $light;
+            border-top:1px solid $light;
+        }
+        li{
+            border-bottom:1px solid $light;
+            a{
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                margin:1rem;
+            }
+        }
+    }
+
+    .solid-button{
+        display:block;
+    }
+    .buttons{
+        @media #{$above-l}{
+            display:grid;
+            width:calc(100% - 7em);
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translate3d(-50%,0,0);
+            >*{
+                &:first-of-type{
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+    }
+    .tab-content{
+        display:none;
+        @media #{$above-l}{
+            display:flex;
+            transform:translate3d(100%,0,0);
+            width:100% !important;
+            right:100% !important;
+            left:auto !important;
+            z-index:-1;
+            flex-flow:column;
+            transition:transform .5s $easeInOutQuart;
+        }
+        h5{
+            display:none;
+            @media #{$above-l}{
+                display:block;
+                margin-bottom:.5rem;
+            }
+        }
+        >*{
+            width:100%;
+        }
+
+    }
+    .line-link .line{
+        background:$dark !important;
+    }
+    li.active{
+        .tab-content{
+            @media #{$below-l}{
+                display:block;
+            }
+            transform:translate3d(0%,0,0);
+        }
+    }
+
+    @media #{$below-l}{
+        .content{
+            display:flex;
+            flex-flow: column-reverse;
+        }
+        .buttons, .shop-content{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap:$fs-l;
+            margin-bottom:$fs-xl;
+            > *{
+                margin:0 !important;
+            }
+        }
+        .shop-content{
+            grid-row: 1;
+        }
+
+
+        .buttons{
+            grid-row: 2;
+        }
+        > .wrapper{
+            padding:0;
+        }
+    }
+    @media #{$below-m}{
+        .buttons, .shop-content{
+            display:block;
+        }
+        .buttons{
+            > *{
+                &:first-of-type{
+                    margin-bottom:$fs-xs !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+
+.button{
+    background:$darkest;
+    border:1px solid $darkest;
+    &--secondary{
+        background:none;
+    }
+    &--tertiary{
+        background:none;
+        span{
+            color:rgba($darkest,$faded);
+        }
+        border:1px solid rgba($darkest,$faded);
+        &:before{
+            background:rgba($darkest,$faded);
+        }
+        &:hover{
+            span{
+                color:$lightest !important;
+            }
+        }
+    }
+}
+[data-color="light"], [data-invert], .dark{
+    color:$lightest;
+    background-color:$darkest;
+
+    .line-link .line{
+        background:$lightest;
+    }
+
+    * {
+        color:$lightest;
+    }
+
+    svg *{
+        fill:$lightest;
+    }
+
+
+    .solid-button{
+        background:none;
+        color: rgba($lightest,$faded);
+    }
+
+    .button{
+        background:$lightest;
+        border:1px solid $lightest;
+        &:before{
+            background:$lightest;
+        }
+        &--secondary{
+            background:none;
+            &:hover{
+                span{
+                    color:$darkest !important;
+                }
+            }
+        }
+        &--tertiary{
+            background:none;
+            span{
+                color:rgba($lightest,$faded);
+            }
+            border:1px solid rgba($lightest,$faded);
+            &:before{
+                background:rgba($lightest,$faded);
+            }
+            &:hover{
+                span{
+                    color:$lightest !important;
+                }
+            }
+        }
+    }
+
+    .filter-nav{
+        background:$darkest;
+    }
+    // .grid-item{
+    //     h3{
+    //         color:black !important;
+    //         *{
+    //             color:black !important;
+    //         }
+    //     }
+    // }
+    &.grid-lines, .grid-lines{
+        &:before{
+            border-left:1px solid rgba($ghosted,.05);
+            border-right:1px solid rgba($ghosted,.05);
+        }
+        &:after{
+            border-right:1px solid rgba($ghosted,.05);
+        }
+    }
+}
+
+[data-color="dark"]{
+    background-color:$lightest;
+    color:$darkest;
+
+    * {
+        color:$darkest;
+    }
+
+    svg *{
+        fill:$darkest;
+    }
+    &.grid-lines, .grid-lines{
+        &:before{
+            border-left:1px solid rgba($ghosted,.25);
+            border-right:1px solid rgba($ghosted,.25);
+        }
+        &:after{
+            border-right:1px solid rgba($ghosted,.25);
+        }
+    }
+    .image-wrapper{
+        &:after{
+            background: linear-gradient(rgba($lightest,0), rgba($lightest,1));
+        }
+    }
+    .line-link .line{
+        background:$darkest;
+    }
+}

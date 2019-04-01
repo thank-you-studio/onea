@@ -1,0 +1,17 @@
+[data-namespace="post"]{
+    margin-top:20rem;
+    .post-title{
+        grid-column: 3 / span 8;
+        margin-bottom:9rem;
+    }
+    .post-date{
+        grid-column: 3 / span 3;
+    }
+    .post-content{
+        grid-column: 6 / span 6;
+        margin-bottom:9rem;
+    }
+    .post-tags{
+        grid-column: 3 / span 12;
+    }
+}

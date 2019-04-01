@@ -1,0 +1,46 @@
+
+
+.module,.grid-item,.nested-grid-item {
+
+    padding-bottom:$fs-xl;
+    @media #{$above-m}{
+        padding-bottom:$desktop-spacing-xl;
+    }
+        &:last-of-type,&.module--banner,&.module--support, &.contact-form,&.product-info, &.featured-area{
+            padding-bottom:0;
+        }
+        &.module--support,&.contact-form, &.product-info, &.shop, &.featured-area{
+        padding:$fs-xl 0;
+        @media #{$above-m}{
+            padding:$desktop-spacing-l 0;
+        }
+    }
+}
+
+.module--branded_intro{
+    padding-bottom:0;
+}
+
+[data-color="light"],[data-color="dark"]{
+    &.grid-item{
+        padding:$fs-xl 0;
+        @media #{$above-m}{
+            padding:$desktop-spacing-l 0;
+        }
+    }
+}
+.module{
+    &:first-of-type{
+        padding-top:$fs-xl;
+        @media #{$above-m}{
+            padding-top:$desktop-spacing-l;
+        }
+    }
+}
+
+[data-url="http://staging.onea.dk/about/"] .module--grid + .module--banner{
+    margin-top:-$fs-xl;
+    @media #{$above-m}{
+        margin-top:-$desktop-spacing-xl;
+    }
+}

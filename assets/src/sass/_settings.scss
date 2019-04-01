@@ -1,0 +1,68 @@
+// breakpoints
+$above-s: 'screen and (min-width: 26em)' !default;
+$below-s: 'screen and (max-width: 26em)' !default;
+$above-m: 'screen and (min-width: 48em)' !default;
+$below-m: 'screen and (max-width: 48em)' !default;
+$above-l: 'screen and (min-width: 60em)' !default;
+$below-l: 'screen and (max-width: 60em)' !default;
+$above-xl: 'screen and (min-width: 70em)' !default;
+
+$max-line-length: 36rem;
+$above-line-length: 'screen and (min-width: 36rem)' !default;
+
+$below-nav-cutoff: 'screen and (max-width: 40em)' !default;
+$above-nav-cutoff: 'screen and (min-width: 40em)' !default;
+
+// colors
+$darkest: #151515;
+$darker: #323232;
+$dark: #1D1D1D;
+$ghosted: #D2D2D2;
+$light: #E8E8E8;
+$lightest: #fff;
+$faded: .5;
+$more-faded: .3;
+
+// typography
+$sans-font-family: "futura-pt","Futura PT","Futura","Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$base-font-size: 16;
+$fs-xs: (10/$base-font-size)+em;
+$fs-s: (12/$base-font-size)+em;
+$fs-m: (15/$base-font-size)+em;
+$fs-l: (24/$base-font-size)+em;
+$fs-xl: (32/$base-font-size)+em;
+$fs-xxl: (48/$base-font-size)+em;
+$fs-xxxl: (60/$base-font-size)+em;
+$fs-xxxxl: (80/$base-font-size)+em;
+
+$max-width: (1220/$base-font-size)+em;
+$above-max-width: 'screen and (min-width: 70em)' !default;
+
+$mobile-wrapper-padding:1.5rem;
+$desktop-wrapper-padding:3.5rem;
+
+$desktop-spacing-xl: 15rem;
+$desktop-spacing-l: 9rem;
+$desktop-spacing-m: 6rem;
+
+
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow:hidden;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > * {
+        min-height:100%;
+        min-width:100%;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,25 @@
+.grid-lines{
+    position:relative;
+
+    &:before, &:after{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        pointer-events:none;
+    }
+
+    &:before{
+        width: 25%;
+        left:25%;
+        border-left:1px solid rgba($ghosted,.125);
+        border-right:1px solid rgba($ghosted,.125);
+    }
+
+    &:after{
+        width: 25%;
+        left:50%;
+        border-right:1px solid rgba($ghosted,.125);
+    }
+}

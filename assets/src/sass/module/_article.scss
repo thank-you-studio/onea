@@ -1,0 +1,106 @@
+[data-module="article"]{
+    // padding-bottom:8em;
+    h1{
+        @extend .fs--xxl;
+    }
+    h2{
+        @extend .fs--xl;
+    }
+    h3{
+        @extend .fs--l;
+    }
+    h4{
+        @extend .fs--m;
+        @extend .tt--uc;
+        @extend .ls--m;
+    }
+    h5{
+        @extend .fs--s;
+        @extend .tt--uc;
+        @extend .ls--m;
+    }
+    h6{
+        @extend .fs--xs;
+        @extend .tt--uc;
+        @extend .ls--m;
+    }
+    p, pre{
+        // @extend .fw--lighter;
+        @extend .lh--m;
+        @extend .ls--s;
+        margin-bottom:1.5em;
+        &:last-of-type{
+            margin-bottom:0;
+        }
+    }
+    p:last-of-type + img{
+        margin-top:1.5em;
+    }
+    .wrapper{
+        > *{
+            max-width:$max-line-length;
+            margin:0 auto;
+            margin-bottom:1.5rem;
+        }
+        > img{
+            max-width:100%;
+        }
+        > * + img, img + *, blockquote + *, * + blockquote, ul + *, * + ul, ol + *, * + ol{
+            padding-top:$fs-xl;
+            margin-bottom:0;
+            &:last-child(){
+                margin-bottom:$fs-xl;
+            }
+            @media #{$above-m}{
+                padding-top:$desktop-spacing-l;
+                &:last-child(){
+                    margin-bottom:$desktop-spacing-l;
+                }
+            }
+        }
+        > blockquote{
+            @media #{$above-line-length}{
+                max-width:$max-line-length + 12rem;
+            }
+        }
+    }
+    blockquote{
+        > *{
+            display:inline;
+        }
+
+        &::before{
+            content: "\201C";
+        }
+        &::after{
+            content: "\201D";
+        }
+        p, &::before, &::after{
+            @extend .fw--bold;
+            @extend .fs--xl;
+            @extend .ls--s;
+            @extend .lh--s;
+        }
+    }
+    ul,ol{
+        margin-bottom:2em;
+    }
+    li{
+        @extend .lh--s;
+        margin-bottom:.25em;
+        &:last-of-type{
+            margin-bottom:0;
+        }
+    }
+    ul li{
+        list-style-type: initial;
+    }
+    ol li{
+        list-style-type: decimal;
+    }
+
+    a{
+        display:inline !important;
+        font-weight:bold;
+    }
+}

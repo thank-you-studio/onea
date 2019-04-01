@@ -1,0 +1,117 @@
+@import '../libs/css-reset-and-normalize-sass/scss/flavored-reset-and-normalize.scss';
+@import '../libs/sass-easing/_easings.scss';
+@import '../libs/swiper/dist/css/swiper.css';
+@import 'base/form-reset.css';
+
+// import vars
+@import 'settings.scss';
+
+*{
+    box-sizing:border-box;
+}
+
+// base
+@import 'base/grid';
+@import 'base/typography';
+@import 'base/form';
+// @import 'base/spacing';
+@import 'base/color';
+// @import 'base/images';
+
+// // // components
+@import 'component/newsletter';
+@import 'component/filter-nav';
+@import 'component/grid-item';
+@import 'component/_shop-carrousel';
+
+@import 'module/main-header';
+@import 'module/main-footer';
+@import 'module/hero';
+@import 'module/product-info';
+@import 'module/product-cta';
+@import 'module/article';
+@import 'module/_banner';
+@import 'module/_product-carrousel';
+@import 'module/_latest-posts';
+@import 'module/_branded-intro';
+@import 'module/_support';
+@import 'module/_featured-area';
+@import 'module/preloader';
+// @import 'modules/work';
+// @import 'modules/archive/archive';
+// @import 'modules/archive/archive-header';
+// @import 'modules/links';
+// @import 'modules/data';
+// @import 'modules/general';
+// @import 'modules/downloads';
+// @import 'modules/banner';
+// @import 'modules/employees';
+// @import 'modules/featured';
+
+@import 'layouts/post';
+@import 'layouts/support';
+// @import 'layouts/project';
+
+@import 'ui/grid-lines';
+@import 'ui/module';
+@import 'ui/button';
+
+body{
+    overflow-x: hidden;
+    width:100vw;
+}
+
+.wrapper{
+    width:100%;
+    max-width:$max-width;
+    margin:0 auto;
+    position:relative;
+    padding: 0 $mobile-wrapper-padding;
+    @media #{$above-s}{
+        padding: 0 3.5em;
+    }
+    // @media #{$above-max-width}{
+    //     padding: 0;
+    // }
+}
+
+.faded{
+    opacity: $faded !important;
+}
+
+img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+svg{
+    *{
+        fill:$darkest;
+        vector-effect: "non-scaling-stroke";
+    }
+}
+
+.load-layer{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100vw;
+    height:100vh;
+    background:$darkest;
+    &:first-of-type{
+        background:$darkest;
+    }
+    &:last-of-type{
+        background:$lightest;
+    }
+    z-index:9;
+}
+
+.content-container{
+    min-height: 100vh;
+}
+
+.pointer{
+    cursor:pointer;
+}

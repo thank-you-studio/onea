@@ -1,0 +1,17 @@
+.product-cta{
+    .text{
+        grid-column: 2 / span 1;
+        @media #{$above-l}{
+            grid-column: 9 / span 3;
+        }
+        h4,.paragraph-text,.post-date{
+            margin-bottom:2rem;
+        }
+    }
+    .image{
+        grid-column: 1 / span 1;
+        @media #{$above-l}{
+            grid-column: 1 / span 8;
+        }
+    }
+}

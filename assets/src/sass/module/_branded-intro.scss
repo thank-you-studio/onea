@@ -1,0 +1,42 @@
+[data-module="branded_intro"]{
+    padding-top:$mobile-wrapper-padding !important;
+    @media #{$above-m}{
+        padding-top:$desktop-wrapper-padding !important;
+    }
+    position:relative;
+    @media #{$below-l}{
+        .wrapper{
+            svg{
+                display:none;
+            }
+        }
+    }
+    @media #{$above-l}{
+        .grid{
+            grid-template-columns: repeat(2, 1fr);
+            .text{
+                @include aspect-ratio(1,1);
+                .inner{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                }
+            }
+        }
+        .logo-wrapper{
+            position:absolute;
+            width:50%;
+            top:50%;
+            right:0;
+            transform:translate3d(0,-50%,0);
+            opacity:$faded;
+        }
+    }
+    svg{
+        path{
+            fill:none;
+            stroke: $darkest;
+            stroke-width: 1px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.featured-area{
+    padding-top:$mobile-wrapper-padding !important;
+    @media #{$above-m}{
+        padding-top:$desktop-wrapper-padding !important;
+    }
+    .grid{
+        // padding-top:5em;
+        // padding-bottom:5em;
+        .col{
+            grid-column: 3 / span 10;
+        }
+    }
+}
