@@ -1,4 +1,4 @@
-## These are the theme files. You'll still need to install the Wordpress shell
+> 🔥 Note: These are the theme files. You'll still need to install the Wordpress shell!
 
 ## Local Wordpress Setup:
 
